@@ -13,6 +13,8 @@ const PORT = 3000;
 const totalCpus = os.cpus().length;
 
 if(cluster.isPrimary){
+    console.log(`Total number of cpus:${totalCpus}`);
+    
     console.log(`Primary cluster started | pid:${process.pid}`);
     
     for(let i=0; i<totalCpus; i++){
